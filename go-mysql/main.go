@@ -17,7 +17,6 @@ func main() {
 	}
 
 	password := os.Getenv("MYSQL_PASSWORD")
-	// root:19970122@/test
 	db, err := sql.Open("mysql", fmt.Sprintf("root:%s@/test", password))
 	if err != nil {
 		panic(err.Error())
